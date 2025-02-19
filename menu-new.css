@@ -1,0 +1,438 @@
+@font-face {
+    font-family: "Noah";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://cahidepalazzo.com.tr/cdn/font/noah-regular.woff2) format("woff2");
+    font-display: swap;
+}
+
+::selection {
+    background: #c62dad5c;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #373535; 
+}
+
+::-webkit-scrollbar-track {
+    background: #242323; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Noah', sans-serif;
+}
+
+.noselect {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+.only-mobile {
+    display: none;
+}
+
+:root {
+    --primary-color: #c62dad;
+    --background-color: #161616;
+    --background-dark-color: #121212;
+    --text-color: #fff;
+    --container: 14rem;
+    --padding: 1.2rem;
+    --border-radius: 0.2rem;
+    --letter-spacing: 0.1rem;
+    --opacity: 0.7;
+    --transition-time: 0.2s;
+    --transition-effect: linear 2ms;
+    --menu-font-size: 1.2rem;
+    --menu-height: 8.5rem;
+}
+
+body {
+    background: var(--background-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.container {
+    padding: 0 var(--container);
+}
+
+.display-none {
+    display: none;
+}
+
+header .menu {
+    height: var(--menu-height);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: var(--background-dark-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+/* Submenu stil ayarları */
+header .menu ul {
+    list-style: none;
+    position: relative;
+}
+
+header .menu ul li {
+    position: relative;
+}
+
+header .menu ul li .submenu {
+    display: none; /* Varsayılan olarak gizle */
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--background-dark-color);
+    padding: 0 calc(var(--padding) * 2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+header .menu ul li:hover .submenu {
+    display: block; /* Masaüstünde alt menüyü göster */
+}
+
+header .menu ul li .submenu li {
+    margin: calc(var(--padding) * 1.20) 0;
+}
+
+header .menu ul li .submenu a {
+    font-size: calc(var(--menu-font-size) * 1.1);
+    color: var(--text-color);
+    text-transform: none;
+    letter-spacing: normal;
+    padding: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+header .menu ul li .submenu a:hover {
+    opacity: var(--opacity); 
+    transition: opacity var(--transition-time) var(--transition-effect);
+}
+
+/* Mobil ayarlar - alt menüyü yan yana göster */
+@media screen and (max-width: 768px) {
+    ul {
+        display: none;
+    }
+    .only-mobile {
+        display: block;
+    }
+}
+
+
+header .menu .logo {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+header .menu .logo img {
+    width: 165px;
+}
+
+header .menu .logo:hover {
+    opacity: var(--opacity); 
+    transition: opacity var(--transition-time) var(--transition-effect);
+}
+
+header .menu nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+header .menu nav a,
+footer .footer .footer-copyright-links a {
+    color: var(--text-color);
+    font-size: var(--menu-font-size);
+    letter-spacing: var(--letter-spacing);
+    text-transform: uppercase;
+    padding: 0 var(--padding);
+}
+
+header .menu nav .menu-change-language {
+    display: flex;
+    align-items: center;
+}
+
+header .menu nav .menu-change-language img {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: calc( var(--padding) / 2);
+}
+
+header .menu nav .menu-reservation-button {
+    margin-left: calc( var(--padding) * 2);
+    padding: var(--padding);
+    background: var(--primary-color);
+    border-radius: var(--border-radius);
+}
+
+header .menu nav a:hover,
+header .menu nav .menu-reservation-button:hover,
+footer .footer .footer-social-media-icon a:hover,
+footer .footer .footer-copyright-links a:hover {
+    opacity: var(--opacity); 
+    transition: opacity var(--transition-time) var(--transition-effect);
+}
+
+header .menu .menu-mobile-button {
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    background-image: url("../../img/all/menu.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: calc(var(--padding) * 2);
+    cursor: pointer;
+}
+
+header .menu .menu-mobile-button:hover {
+     opacity: var(--opacity); 
+     transition: opacity var(--transition-time) var(--transition-effect);
+}
+
+#about {
+    scroll-margin-top: 12rem;
+}
+
+@media screen and (max-width: 1340px) {
+
+    .container {
+        padding: 0 calc(var(--container) / 2);
+    }
+    
+}
+
+@media screen and (max-width: 1200px) {
+
+    .container {
+        padding: 0 calc(var(--container) / 3);
+    }
+    
+}
+
+@media screen and (max-width: 1155px) {
+
+    *:hover{
+        opacity: 1 !important;
+    }
+
+    .container {
+        padding: 0 calc(var(--container) / 2);
+    }
+
+    header .menu {
+        justify-content: flex-start;
+    }
+
+    header .menu .menu-mobile-button {
+        display: block;
+    }
+
+    header .menu nav:not(.active) a:not(header .menu nav .menu-reservation-button) {
+        display: none;
+    }
+
+    header .menu nav.active {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        background: var(--background-dark-color);
+        padding-top: calc(var(--padding) * 7);
+        padding-bottom: calc(var(--padding) * 2);
+        text-align: center;
+        z-index: 1;
+    }
+
+    header .menu nav.active a:not(header .menu nav .menu-reservation-button) {
+        padding: var(--padding);
+    }
+
+    header .menu nav.active .menu-reservation-button {
+        margin: var(--padding) 0;
+    }
+
+    header .menu nav.active + button.menu-mobile-button {
+        width: 3rem;
+        height: 3rem;
+        margin-left: auto;
+        background-image: url("../../img/all/close.svg");
+        z-index: 2;
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+
+    .container {
+        padding: 0 calc(var(--container) / 2);
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        padding: 0 calc(var(--container) / 3);
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+
+    .container {
+        padding: 0 calc(var(--container) / 4);
+    }
+    
+}
+
+@media screen and (max-width: 458px) {
+
+    .container {
+        padding: 0 calc(var(--container) / 8);
+    }
+
+    header .menu .menu-mobile-button {
+        margin-left: calc(var(--padding));
+     }
+
+    header .menu .logo img {
+        width: 160px;
+    }
+    
+}
+
+@media screen and (max-width: 406px ) {
+
+    .container {
+        padding: 0 calc(var(--container) / 15);
+    }
+
+    header .menu .logo img {
+        width: 160px;
+    }
+
+    header .menu nav .menu-reservation-button {
+        font-size: 1.1rem;
+    }
+
+    header .menu nav.active .menu-reservation-button {
+        font-size: 1.2rem;
+    }
+    
+}
+
+@media screen and (max-width: 382px) {
+
+    .container {
+        padding: 0 calc(var(--container) / 15);
+    }
+
+    header .menu .logo img {
+        width: 152px;
+    }
+    
+}
+
+@media screen and (max-width: 372px) {
+
+    header .menu .logo img {
+        width: 145px;
+    }
+    
+}
+
+@media screen and (max-width: 366px) {
+
+    .container {
+        padding: 0 calc(var(--container) / 15);
+    }
+
+    header .menu .logo img {
+        width: 140px;
+    }
+
+    header .menu nav .menu-reservation-button {
+        font-size: 1rem;
+    }
+    
+}
+
+@media screen and (max-width: 352px) {
+
+    header .menu nav .menu-reservation-button {
+        display: none;
+    }
+    
+}
+
+footer .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-dark-color);
+    padding-top: calc(var(--padding) * 2);
+    padding-bottom: var(--padding);
+    text-align: center;
+}
+
+footer .footer .footer-social-media-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: calc(var(--padding) * 1.50);
+}
+
+footer .footer .footer-social-media-icon a {
+    padding: 0 calc(var(--padding) / 2);
+}
+
+footer .footer .footer-social-media-icon a img {
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+footer .footer .footer-text {
+    margin-bottom: calc(var(--padding) * 1.50);
+}
+
+footer .footer .footer-text a {
+    padding: calc(var(--padding) / 2);
+    color: var(--text-color);
+    font-size: var(--menu-font-size);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+}
