@@ -1,0 +1,1 @@
+document.querySelector(".pop-all").addEventListener("click",(function(e){e.target.closest(".pop")&&document.querySelector(".pop-all").remove()}));
