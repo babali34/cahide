@@ -1,0 +1,79 @@
+main div.cover img {
+    width: 100%;
+    margin-top: var(--menu-height);
+}
+
+main .artist-performances-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .artist-performances-video > * {
+    margin: calc( var(--padding) * 3);
+    width: 80rem;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    main .artist-performances-video > * {
+        width: 70rem;
+        height: 40rem;
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+
+    main .artist-performances-video > * {
+        width: 60rem;
+        height: 40rem;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    main .artist-performances-video > * {
+        width: 50rem;
+        height: 35rem;
+    }
+    
+}
+
+@media screen and (max-width: 586px) {
+
+    main .artist-performances-video > * {
+        width: 40rem;
+        height: 30rem;
+    }
+    
+}
+
+@media screen and (max-width: 458px) {
+
+    main .artist-performances-video > * {
+        width: 35rem;
+        height: 30rem;
+    }
+    
+}
+
+@media screen and (max-width: 406px ) {
+
+    main .artist-performances-video > * {
+        width: 30rem;
+        height: 25rem;
+    }
+    
+}
+
+@media screen and (max-width: 352px) {
+
+    main .artist-performances-video > * {
+        width: 25rem;
+        height: 20rem;
+    }
+    
+}

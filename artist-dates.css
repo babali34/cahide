@@ -1,0 +1,55 @@
+main div.cover img {
+    width: 100%;
+    margin-top: var(--menu-height);
+}
+
+main div.artist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top: calc(var(--padding) * 4);
+    margin-bottom: calc(var(--padding) * 12);
+    gap: calc(var(--padding) * 2);
+}
+
+.container.artist:not(:has(a)) {
+    min-height: 55rem;
+}
+
+main div.artist img {
+    height: 50rem;
+    width: auto;
+    border-radius: calc(var(--border-radius) * 4);
+}
+
+h2.live-music {
+    color: var(--text-color);
+    font-size: 4.5rem;
+    letter-spacing: calc(var(--letter-spacing)* 2);
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: calc(var(--padding)* 5.5);
+    text-align: center;
+}
+
+@media screen and (max-width: 282px) {
+
+    main div.artist img {
+        height: 42rem;
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+
+    h2.live-music {
+        margin: 0;
+    }
+    
+}
+
+main div.artist img:hover {
+    opacity: var(--opacity); 
+    transition: opacity var(--transition-time) var(--transition-effect);
+}
