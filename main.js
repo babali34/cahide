@@ -1,0 +1,1 @@
+const mobile=document.querySelector(".menu-mobile-button"),nav=document.querySelector("nav");mobile.addEventListener("click",(function(){nav.classList.toggle("active")})),console.clear(),console.log("%cCahide Palazzo"," color:#c62dad; font-size: 40pt"),console.log("%c Hata bildirme ve önerileriniz için arda@cahidepalazzo.com.tr ","color:red; font-size: 9pt");

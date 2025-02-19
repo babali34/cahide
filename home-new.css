@@ -1,0 +1,537 @@
+header .fullscreen-video {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header .fullscreen-video-item {
+    width: 100vw;
+    height: auto;
+}
+
+@media (min-width: 1024px) {
+    header .fullscreen-video {
+        display: flex;
+        height: 100vh !important;
+        overflow: hidden;
+        justify-content: center;
+        align-items: end;
+    }
+
+    header .fullscreen-video-item {
+        width: auto;
+        height: 90vh;
+    }
+}
+
+
+main .about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: calc(var(--padding) * 10) 0;
+}
+
+main .about-section img {
+    width: 120.4rem;
+}
+
+@media screen and (max-width: 1340px) {
+
+    main .about-section img {
+        width: 112rem;
+    }
+    
+}
+
+@media screen and (max-width: 1200px) {
+
+    main .about-section img {
+        width: 108rem;
+    }
+
+    header .fullscreen-video {
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+@media screen and (max-width: 1156px) {
+
+    main .about-section img {
+        width: 60rem;
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+
+    main .about-section img {
+        width: 50rem;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    main .about-section {
+        margin-top: 0;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+
+    main .about-section img {
+        width: 36rem;
+    }
+}
+
+@media screen and (max-width: 458px) {
+
+    main .about-section img {
+        width: 32rem;
+    }
+    
+}
+
+@media screen and (max-width: 382px) {
+
+    main .about-section img {
+        width: 27rem;
+    }
+    
+}
+
+@media screen and (max-width: 352px) {
+
+    main .about-section img {
+        width: 24rem;
+    }
+       
+}
+
+.image-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section picture img {
+    width: 100rem;
+}
+
+
+@media screen and (max-width: 1156px) {
+
+    .image-section picture img {
+        width: 60rem;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .image-section picture img {
+        width: 50rem;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+
+    .image-section picture img {
+        width: 40rem;
+    }
+    
+}
+
+@media screen and (max-width: 458px) {
+
+    .image-section picture img {
+        width: 33rem;
+    }
+    
+}
+
+@media screen and (max-width: 352px) {
+
+    .image-section picture img {
+        width: 27rem;
+    }
+    
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: calc(var(--padding) * 4) 0;
+    gap: calc(var(--padding) * 2);
+}
+
+.image-gallery img {
+    width: 35.6rem;
+    height: 23.7rem;
+    border-radius: calc(var(--border-radius) * 4);
+}
+
+.image-gallery img:hover {
+    opacity: var(--opacity); 
+    transition: opacity var(--transition-time) var(--transition-effect);
+}
+
+@media screen and (max-width: 406px ) {
+
+    .image-gallery img {
+        width: 30.6rem;
+        height: 20.7rem;
+    }
+    
+}
+
+@media screen and (max-width: 352px) {
+
+    .image-gallery img {
+        width: 25.6rem;
+        height: 15.7rem;
+    }
+    
+}
+
+.faq-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: calc(var(--padding) * 2) 0;
+}
+
+.faq-section h2 {
+    color: var(--text-color);
+    font-size: 4.5rem;
+    letter-spacing: calc(var(--letter-spacing) * 2);
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: calc(var(--padding) * 3.5);
+    text-align: center;
+}
+
+.faq-section .faq-item {
+    margin-bottom: var(--padding);
+    background: var(--background-dark-color);
+    width: 80rem;
+    border-radius: calc(var(--border-radius) * 2);
+}
+
+.faq-section .faq-item .faq-item-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: calc( var(--padding) * 2) calc( var(--padding) * 3);
+}
+
+.faq-section .faq-item .faq-item-question:hover {
+    opacity: var(--opacity); 
+    transition: opacity var(--transition-time) var(--transition-effect);
+}
+
+.faq-section .faq-item .faq-item-question h3 {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.faq-section .faq-item .faq-item-question img {
+    width: 2.4rem;
+    height: 2.4rem;
+    transition: var(--transition-time) var(--transition-effect);
+}
+
+details[open] .faq-item-question img {
+    transform: rotate(-180deg);
+}
+
+.faq-section .faq-item-answer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 calc( var(--padding) * 3) calc( var(--padding) * 2) calc( var(--padding) * 3);
+}
+
+.faq-section .faq-item-answer p {
+    margin-top: calc(var(--padding)/ 3);
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.faq-section .faq-item-answer p + p {
+    margin-top: calc(var(--padding) * 1.5);
+}
+
+.faq-section .faq-item-answer p a {
+    display: inline-block;
+    font-size: inherit;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: var(--primary-color);
+}
+
+.faq-section .faq-item-answer p a img {
+    width: 1.3rem;
+    margin-right: 1rem;
+}
+
+.faq-section .faq-item-answer p a:hover {
+    opacity: var(--opacity); 
+    transition: opacity var(--transition-time) var(--transition-effect);
+}
+
+@media screen and (max-width: 992px) {
+
+    .faq-section .faq-item {
+        width: 70rem;
+    }
+
+    .faq-section h2 {
+        font-size: 4rem;
+    }
+
+    .faq-section .faq-item .faq-item-question h3 {
+        font-size: 1.9rem;
+    }
+    
+}
+
+@media screen and (max-width: 852px) {
+
+    .faq-section .faq-item {
+        width: 60rem;
+    }
+
+    .faq-section h2 {
+        font-size: 3.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .faq-section .faq-item {
+        width: 50rem;
+    }
+
+    .faq-section h2 {
+        font-size: 3.3rem;
+    }
+
+    .faq-section .faq-item .faq-item-question h3 {
+        font-size: 1.8rem;
+    }
+
+}
+
+@media screen and (max-width: 595px) {
+
+    .faq-section .faq-item {
+        width: 40rem;
+    }
+
+    .faq-section h2 {
+        font-size: 3rem;
+    }
+    
+}
+
+@media screen and (max-width: 440px) {
+
+    .faq-section .faq-item {
+        width: 35rem;
+    }
+
+    .faq-section h2 {
+        font-size: 3rem;
+    }
+
+    .faq-section .faq-item .faq-item-question h3 {
+        font-size: 1.7rem;
+    }
+
+    .faq-section .faq-item-answer p {
+        font-size: 1.5rem;
+    }
+
+    .faq-section .faq-item .faq-item-question img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .faq-section .faq-item .faq-item-question {
+        padding: calc( var(--padding) * 2) calc( var(--padding) * 1.5);
+    }
+    
+    .faq-section .faq-item-answer {
+        padding: 0 calc( var(--padding) * 1.5) calc( var(--padding) * 2) calc( var(--padding) * 1.5);
+    }
+    
+}
+
+@media screen and (max-width: 390px) {
+
+    .faq-section .faq-item {
+        width: 33rem;
+    }
+
+    .faq-section h2 {
+        font-size: 3rem;
+    }
+
+    .faq-section .faq-item .faq-item-question h3 {
+        font-size: 1.6rem;
+    }
+
+    .faq-section .faq-item-answer p {
+        font-size: 1.4rem;
+    }
+    
+}
+
+@media screen and (max-width: 352px) {
+
+    .faq-section .faq-item {
+        width: 30rem;
+    }
+
+    .faq-section h2 {
+        font-size: 3rem;
+    }
+
+    .faq-section .faq-item .faq-item-question h3 {
+        font-size: 1.5rem;
+    }
+
+    .faq-section .faq-item-answer p {
+        font-size: 1.4rem;
+    }
+    
+}
+
+@media screen and (max-width: 323px) {
+
+    .faq-section .faq-item {
+        width: 26rem;
+    }
+
+    .faq-section h2 {
+        font-size: 3rem;
+    }
+
+    .faq-section .faq-item .faq-item-question h3 {
+        font-size: 1.4rem;
+    }
+
+    .faq-section .faq-item-answer p {
+        font-size: 1.3rem;
+    }
+    
+}
+
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: calc(var(--padding) * 6) 0;
+}
+
+.contact-section .contact-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: calc(var(--padding) * 2);
+    padding-right: calc( var(--padding) * 2 );
+}
+
+.contact-section .contact-text h2 {
+    color: var(--text-color);
+    font-size: 4.5rem;
+    letter-spacing: calc(var(--letter-spacing) * 2);
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: calc(var(--padding) * 3.5);
+    text-align: center;
+}
+
+.contact-section .contact-text p {
+    margin-top: calc(var(--padding)/ 3);
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.contact-section .contact-text p + p {
+    margin-top: calc(var(--padding) * 2);
+}
+
+.contact-section .contact-text a {
+    display: inline-block;
+    font-size: inherit;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: var(--primary-color);
+}
+
+.contact-section .contact-text a img {
+    width: 1.3rem;
+    margin-right: 1rem;
+}
+
+.contact-section .contact-text p a:hover {
+    opacity: var(--opacity); 
+    transition: opacity var(--transition-time) var(--transition-effect);
+}
+
+.contact-section .contact-google-map {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-section .contact-google-map iframe {
+    border: 0;
+    width: 60rem;
+    height: 45rem;
+    border-radius: calc(var(--border-radius) * 2);
+}
+
+@media screen and (max-width: 1155px) {
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-section .contact-text {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 var(--padding) calc(var(--padding) * 4) var(--padding);
+    }
+    
+    .contact-section .contact-google-map {
+        width: 85vw;
+    }
+
+}
